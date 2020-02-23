@@ -65,44 +65,48 @@
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="txtArea" alignment="1" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="btn0" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="btnExit" pref="105" max="32767" attributes="0"/>
+                              <Component id="btn0" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                       <Component id="btn7" max="32767" attributes="0"/>
                                       <Component id="btn1" max="32767" attributes="0"/>
                                       <Component id="btn4" min="-2" pref="50" max="-2" attributes="0"/>
-                                      <Component id="btnExit" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                       <Component id="btn8" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="btn5" alignment="1" pref="0" max="32767" attributes="0"/>
+                                      <Component id="btn5" alignment="1" pref="50" max="32767" attributes="0"/>
                                       <Component id="btn2" alignment="1" pref="0" max="32767" attributes="0"/>
-                                      <Component id="btnCleanPantalla" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
+                              <Component id="btnCleanPantalla" alignment="1" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="btnClean" alignment="1" pref="0" max="32767" attributes="0"/>
-                              <Component id="jButton11" alignment="1" pref="0" max="32767" attributes="0"/>
-                              <Component id="jButton13" alignment="1" pref="0" max="32767" attributes="0"/>
-                              <Component id="jButton12" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
-                              <Component id="btnPunto" min="-2" pref="50" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="btnClean" alignment="1" pref="0" max="32767" attributes="0"/>
+                                      <Component id="jButton11" alignment="1" pref="0" max="32767" attributes="0"/>
+                                      <Component id="jButton13" alignment="1" pref="0" max="32767" attributes="0"/>
+                                      <Component id="jButton12" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
+                                      <Component id="btnPunto" min="-2" pref="50" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="btnMultiplicar" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="btnResta" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="btnSuma" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="btnDivision" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="btnResultado" min="-2" pref="50" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Component id="txtOp" min="-2" pref="83" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="btnMultiplicar" alignment="1" max="32767" attributes="0"/>
-                              <Component id="btnResta" alignment="1" max="32767" attributes="0"/>
-                              <Component id="btnSuma" alignment="1" max="32767" attributes="0"/>
-                              <Component id="btnDivision" alignment="1" max="32767" attributes="0"/>
-                              <Component id="btnResultado" min="-2" pref="50" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
-                          <Component id="txtOp" min="-2" pref="83" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Component id="txtAcum" min="-2" pref="206" max="-2" attributes="0"/>
@@ -119,7 +123,10 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="txtArea" min="-2" pref="43" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="txtOp" min="-2" pref="24" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="txtOp" min="-2" pref="24" max="-2" attributes="0"/>
+                  <Component id="btnExit" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
@@ -134,6 +141,8 @@
                               <Component id="jButton13" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
+                              <Component id="btnCleanPantalla" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="btn8" min="-2" max="-2" attributes="0"/>
@@ -141,11 +150,6 @@
                                       <Component id="btn5" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="btnCleanPantalla" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="btnExit" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace max="-2" attributes="0"/>
                                       <Component id="btn7" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="btn4" min="-2" max="-2" attributes="0"/>
@@ -279,7 +283,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnExit">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Off"/>
+        <Property name="text" type="java.lang.String" value="SALIR"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnExitActionPerformed"/>
