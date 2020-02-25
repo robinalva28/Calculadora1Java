@@ -5,14 +5,34 @@
  */
 package calculadora;
 
-import jdk.nashorn.internal.ir.BreakNode;
-// hoa algo bonito
 /**
  *
  * @author Robinson
  */
 public class CalculaPanel extends javax.swing.JFrame {
 
+   public void operacionesMath(String op){
+    txtOp.setText(op);
+
+        if (Double.parseDouble(txtAcum.getText()) == 0.0) {
+            txtAcum.setText(txtArea.getText());
+            txtArea.setText("");
+            acum = Double.parseDouble(txtAcum.getText());
+        } else {
+            if (Double.parseDouble(txtAcum.getText()) != 0.0) {
+                resultado = calcular(Double.parseDouble(txtArea.getText()), txtOp.getText(), Double.parseDouble(txtAcum.getText()));
+                txtAcum.setText(Double.toString(resultado));
+                txtArea.setText("");
+            }
+        }
+        System.out.println("pant: " + pant);
+        System.out.println("acum: " + acum);
+    }      
+   
+
+    public void addText(String num) {
+        txtArea.setText(txtArea.getText() + num);
+    }
     String op = "";
     Double numArea = 0.;
 
@@ -351,44 +371,44 @@ public class CalculaPanel extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        txtArea.setText(txtArea.getText() + "1");
+        addText("1");
 
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
-        txtArea.setText(txtArea.getText() + "2");
+        addText("2");
     }//GEN-LAST:event_btn2ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        txtArea.setText(txtArea.getText() + "3");
+        addText("3");
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
-        txtArea.setText(txtArea.getText() + "4");
+        addText("4");
     }//GEN-LAST:event_btn4ActionPerformed
 
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
-        txtArea.setText(txtArea.getText() + "5");
+        addText("5");
     }//GEN-LAST:event_btn5ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        txtArea.setText(txtArea.getText() + "6");
+        addText("6");
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
-        txtArea.setText(txtArea.getText() + "7");
+        addText("7");
     }//GEN-LAST:event_btn7ActionPerformed
 
     private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
-        txtArea.setText(txtArea.getText() + "8");
+        addText("8");
     }//GEN-LAST:event_btn8ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        txtArea.setText(txtArea.getText() + "9");
+        addText("9");
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void btn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn0ActionPerformed
-        txtArea.setText(txtArea.getText() + "0");
+        addText("0");
     }//GEN-LAST:event_btn0ActionPerformed
 
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
@@ -404,121 +424,39 @@ public class CalculaPanel extends javax.swing.JFrame {
 
     private void btnSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumaActionPerformed
 
-        txtOp.setText("+");
-
-        if (Double.parseDouble(txtAcum.getText()) == 0.0) {
-            txtAcum.setText(txtArea.getText());
-            txtArea.setText("");
-            acum = Double.parseDouble(txtAcum.getText());
-        } else {
-            if (Double.parseDouble(txtAcum.getText()) != 0.0) {
-                resultado = calcular(Double.parseDouble(txtArea.getText()), txtOp.getText(), Double.parseDouble(txtAcum.getText()));
-                txtAcum.setText(Double.toString(resultado));
-                txtArea.setText("");
-            }
-        }
-        System.out.println("pant: " + pant);
-        System.out.println("acum: " + acum);
+        operacionesMath("+");
     }//GEN-LAST:event_btnSumaActionPerformed
 
     private void btnResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResultadoActionPerformed
-        if (txtOp.getText() == "+") {
+
+          if (txtOp.getText() != "") {
             resultado = calcular(Double.parseDouble(txtAcum.getText()), txtOp.getText(), Double.parseDouble(txtArea.getText()));
             txtArea.setText(Double.toString(resultado));
             txtAcum.setText("0");
             txtOp.setText("");
-        } else {
-            if (txtOp.getText() == "/") {
-                resultado = calcular(Double.parseDouble(txtAcum.getText()), txtOp.getText(), Double.parseDouble(txtArea.getText()));
-                txtArea.setText(Double.toString(resultado));
-                txtAcum.setText("0");
-                txtOp.setText("");
-            } else {
-                if (txtOp.getText() == "-") {
-                    resultado = calcular(Double.parseDouble(txtAcum.getText()), txtOp.getText(), Double.parseDouble(txtArea.getText()));
-                    txtArea.setText(Double.toString(resultado));
-                    txtAcum.setText("0");
-                    txtOp.setText("");
-                } else {
-                    if (txtOp.getText() == "*") {
-                        resultado = calcular(Double.parseDouble(txtAcum.getText()), txtOp.getText(), Double.parseDouble(txtArea.getText()));
-                        txtArea.setText(Double.toString(resultado));
-                        txtAcum.setText("0");
-                        txtOp.setText("");
-                    }
-                }
-            }
         }
+
     }//GEN-LAST:event_btnResultadoActionPerformed
 
     private void btnRestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestaActionPerformed
-        txtOp.setText("-");
-
-        if (Double.parseDouble(txtAcum.getText()) == 0.0) {
-            txtAcum.setText(txtArea.getText());
-            txtArea.setText("");
-            acum = Double.parseDouble(txtAcum.getText());
-        } else {
-            if (Double.parseDouble(txtAcum.getText()) != 0.0) {
-                
-                resultado = calcular(Double.parseDouble(txtAcum.getText()), txtOp.getText(), Double.parseDouble(txtArea.getText()));
-                txtAcum.setText(Double.toString(resultado));
-                txtArea.setText("");
-            }
-}
-        System.out.println("pant: " + pant);
-        System.out.println("acum: " + acum);
+       
+        operacionesMath("-");
     }//GEN-LAST:event_btnRestaActionPerformed
 
     private void btnMultiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicarActionPerformed
-        txtOp.setText("*");
-
-        if (Double.parseDouble(txtAcum.getText()) == 0.0) {
-            txtAcum.setText(txtArea.getText());
-            txtArea.setText("");
-            acum = Double.parseDouble(txtAcum.getText());
-        } else {
-            if (Double.parseDouble(txtAcum.getText()) != 0.0) {
-                resultado = calcular(Double.parseDouble(txtAcum.getText()), txtOp.getText(), Double.parseDouble(txtArea.getText()));
-
-                txtAcum.setText(Double.toString(resultado));
-                txtArea.setText("");
-
-            }
-
-        }
-        System.out.println("pant: " + pant);
-        System.out.println("acum: " + acum);
+        operacionesMath("*");
     }//GEN-LAST:event_btnMultiplicarActionPerformed
 
     private void btnDivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivisionActionPerformed
 
-        txtOp.setText("/");
-
-        if (Double.parseDouble(txtAcum.getText()) == 0.0) {
-            txtAcum.setText(txtArea.getText());
-            txtArea.setText("");
-            acum = Double.parseDouble(txtAcum.getText());
-        } else {
-            if (Double.parseDouble(txtAcum.getText()) != 0.0) {
-                resultado = calcular(Double.parseDouble(txtAcum.getText()), txtOp.getText(), Double.parseDouble(txtArea.getText()));
-
-                txtAcum.setText(Double.toString(resultado));
-                txtArea.setText("");
-
-            }
-
-        }
-        System.out.println("pant: " + pant);
-        System.out.println("acum: " + acum);
+        operacionesMath("/");
     }//GEN-LAST:event_btnDivisionActionPerformed
 
     private void btnPuntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPuntoActionPerformed
         if (txtArea.getText().contains(".")) {
-            
+
         } else {
             txtArea.setText(txtArea.getText() + ".");
-
         }
     }//GEN-LAST:event_btnPuntoActionPerformed
 
@@ -529,7 +467,6 @@ public class CalculaPanel extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn0;
